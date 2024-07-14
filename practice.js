@@ -1,21 +1,45 @@
 
 
-let number1 = 90;
-let number2 = 70;
-let number3 = 80;
+
+// let i = 1;
+// while(i <= 10){
+//     if(i === 5) {
+//     i++;
+//         continue;
+//     }
+//     console.log(i);
+//     i++;
+// }
 
 
-if(number1 > number2  &&  number1 > number3){
+let arr = ['apple','mango','banana']
 
-    console.log('number 1 is bigger then 2 and 3')
+for (let i = 0; i < arr.length; i++) {
+    const element = arr[i];
 
-}else if(number2 > number1  &&  number2 > number3){
+    if (arr[i] === 'mango') {
 
-    console.log('number 2 in bigger then 1 and 3')
+        continue;
+        // break;
+        
+    }
 
-}else{
-    console.log('number3 in bigger then 1 and 2')
+    console.log(element)
+    
+}
 
+
+
+
+for (let i = 1; i <= 10; i++) {
+    const element = (i);
+
+    if (i === 5) {
+        continue;
+        
+    }
+    console.log(element)
+    
 }
 
 
@@ -29,4 +53,51 @@ if(number1 > number2  &&  number1 > number3){
 
 
 
-console.log()
+
+
+let number = [10,23,90,9,9,]
+
+let j = 0;
+
+while (j < number.length) {
+
+    if (number[j] === 23) {
+     j++;
+        continue;    
+    }
+
+    console.log(j);
+    j++ 
+}
+
+// jm  while loop 
+
+let i = 1;
+while(i <= 10){
+    if(i === 5) {
+    i++;
+        continue;
+    }
+    console.log(i);
+    i++;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
