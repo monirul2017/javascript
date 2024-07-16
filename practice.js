@@ -1,116 +1,44 @@
 
-let array = [ 15,10,5,8,20]
+let arr = ['moni','raju','bayezid','anower','moni','raju','bayezid','anower','moni','raju','bayezid','anower','moni','raju','bayezid','anower'];
 
+console.log(arr)
 
-function arrayavg(){
+function deleteDuplicateItem(){
 
-let total = 0;
+  let newArray = []
 
-    for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
+    const element = arr[i];
+    if (newArray.includes(element) === false) {
 
-        console.log(array[i])
-
-        total =total +  array[i];
+      newArray.push(element)
+      
     }
-
-    return total;
+  }
+  return newArray;
 }
 
-let total = arrayavg();
 
-console.log('total' ,total)
+let output = deleteDuplicateItem()
 
-console.log( "average" ,total/array.length)
-
-
-// -------------------------
-
-
-console.log("------------------")
-console.log("------------------")
-console.log("------------------")
+console.log(output)
 
 
 
 
-function evenNumber (){
-
-    for (let i = 0; i <= 20; i++) {
-        if (i % 2 ===0) {
-        console.log(i)
-            
-        }
-       
-    }
-}
-
-evenNumber()
-
-console.log("------------------")
-console.log("------------------")
-console.log("------------------")
 
 
 
-function oddNumber (){
-
-    for (let i = 0; i <= 20; i++) {
-        if (i % 2 !==0) {
-        console.log(i)
-            
-        }
-       
-    }
-}
-
-oddNumber()
 
 
 
-console.log("------------------")
-console.log("------------------")
-console.log("------------------")
 
 
 
-function leapyear(){
-    for (let i = 2000; i <= 2024; i++) {
-        
-      if (i % 4 === 0) {
-        console.log(i , "was a leapyear")
-        
-      }else{
-        console.log(i,' not a leapyear')
-      }
-        
-    }
-
-}
-
-leapyear()
-
-
-console.log("------------------")
-console.log("------------------")
-console.log("------------------")
 
 
 
-let number =[12,11,15,16,23,34,50]
 
-function leapyeararrray(){
 
-    for (let i = 0; i < number.length; i++) {
 
-      if (number[i] % 2 === 0) {
-        console.log(number[i] , "is a even number")
-        
-      }else{
-        console.log(number[i],'is odd')
-      }
-        
-    }
 
-}
-
-leapyeararrray()
