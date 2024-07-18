@@ -1,84 +1,112 @@
+// problem number 1
 
-let phones = [
-  {name:'apple',price:90000,color:'silver'},
-  {name:'nokia',price:25000,color:'silver'},
-  {name:'oppo',price:18000,color:'black'},
-  {name:'hawei',price:30000,color:'black'},
-  {name:'google',price:65000,color:'silver'},
-  {name:'one plus',price:48000,color:'black'},
-]
+function cube(input){
 
-console.log(phones)
+    return Math.pow(input,3)
 
 
-function myfunction(){
+}
 
-    let lowestPrice = phones[0].price;
+let cubeoutput = cube(3)
+console.log(cubeoutput)
 
-    for (let i = 0; i < phones.length; i++) {
-        const element = phones[i];
 
-        console.log(element)
 
-          if (lowestPrice > element.price) {
-              lowestPrice = element.price
-          }   
+// problem 2
+
+function machString(str1,str2){
+
+    if (str1.toLowerCase().includes(str2.toLowerCase())) {
+        return true
+    }else{
+        return false
     }
-    return lowestPrice;
+
 }
 
-
-let output = myfunction()
-
-console.log("---------------")
-console.log('lowest price is ', output)
-
-// ////////////////////////////
-console.log('==============')
+sting1= 'bangladesh',
+sting2 = 'd'
 
 
 
-
-let products = [
-
-  {name:'phone',price:20000,color:'silver'},
-  {name:'book',price:500,},
-  {name:'pen',price:20},
-]
+let machoutput = machString(sting1,sting2)
+console.log(machoutput)
 
 
-function myfunction2(){
+// problem 3
 
-  let totalPrice = 0;
-  for (let i = 0; i < products.length; i++) {
-    const element = products[i];
-    console.log(element)
-    totalPrice += element.price;
+function sortMaker(arr) {
+
+    const firstElement = arr[0];
     
-  }
+    const secondElement = arr[1];
+    
+    if (!Array.isArray(arr) || arr.length !== 2 || typeof firstElement !== 'number' || typeof secondElement !== 'number' || firstElement < 0 || secondElement < 0) {
+    
+    return "Invalid Input";
+    
+    }
+    
+    else if (firstElement === secondElement) {
+    
+    return "equal";
+    
+    }
+    
+    else if (secondElement > 0) {
+    
+    return arr.sort(function(a, b){return b-a});
+    
+    }
+    
+    }
 
-  return totalPrice;
+
+    let arr = [10,20]
+let ss =sortMaker(arr)
+
+console.log(ss)
+
+
+
+
+
+// problem 4 
+
+
+
+
+
+
+
+// problem number 5
+function myfunction(arr,price){
+
+    let totalTaka = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        const element = arr[i];
+        // console.log(element)
+
+        totalTaka += element;        
+    }
+
+    if (!arr[0]) {
+        return 'enter a valid number in first index'
+        
+    }
+    else if (totalTaka > price  && arr[0]  !== 0 ) {
+
+        return 'you get the chips'
+    }else{
+        return 'you have no enough money'
+    }
 }
 
-let totalPrice = myfunction2()
-console.log('total price is ',totalPrice)
 
+let number = [5,10,15]
 
+let output = myfunction(number,20)
 
-// ========================
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(output)
 
