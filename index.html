@@ -7,35 +7,86 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
- 
 
-  <div class="section">
-       <h2 id="heading">heading </h2>
-       <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit amet possimus magnam ipsa ex eum maiores vitae, nihil assumenda perspiciatis.</p>
-  </div>
+    <h1>practices event bubble</h1>
 
+<section id="section">
 
-<h3 style="text-transform: capitalize;">this is h3 heading</h3>
-
-
-<h4 title="this is h3 tag">Lorem ipsum dolor sit amet.</h4>
-<h4 title="this is h3 tag">Lorem ipsum dolor sit amet.</h4>
-<h4 title="this is h3 tag">Lorem ipsum dolor sit amet.</h4>
-
-
-<p id="id">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi recusandae perferendis nesciunt voluptates autem, ipsum debitis numquam! Fuga sint nobis itaque nesciunt voluptatum sit esse a mollitia, minima cum incidunt.</p>
+    <h2>hello js</h2>
+      <ul id="ul">
+        <li id="li">lorem5</li>
+        <li id="li2">lorem5</li>
+        <li id="li">lorem5</li>
+        <li id="li">lorem5</li>
+        <li id="li">lorem5</li>
+      </ul>
+</section>
 
 
-<p id="get">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, consequatur.</p>
+<section id="section2">
 
-<p id="set">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, consequatur.</p>
+    <h2>hello js</h2>
+      <ul id="ul2">
+        <li id="li1">lorem5</li>
+        <li id="li">lorem5</li>
+        <li id="li">lorem5</li>
+        <li id="li">lorem5</li>
+        <li id="li">lorem5</li>
+      </ul>
+</section>
+<button id="add">add</button>
 
 
 
-  <script src="dom.js"></script>
-  
-<!-- <script src="practice.js"></script> -->
 
-<!-- <script src="callback.js"></script> -->
+    <script>
+
+
+let section = document.getElementById("section")
+
+section.addEventListener("click",(event)=>{
+    console.log("section clicked");
+    event.stopPropagation()
+})
+
+let ul = document.getElementById("ul")
+ul.addEventListener("click",(event)=>{
+    console.log("ul clicked");
+    event.stopPropagation()
+
+})
+
+let li = document.getElementById("li2")
+li.addEventListener("click",(event)=>{
+    console.log("li clicked");
+    event.stopPropagation()
+
+})
+
+// //////////////////////////////
+
+
+
+let section2 = document.getElementById("section2")
+
+section2.addEventListener("click",(event)=>{
+
+    event.target.parentNode.removeChild(event.target)
+})
+
+
+
+
+document.getElementById("add").addEventListener("click",function(){
+    let element = document.createElement("p");
+element.innerHTML = "this is temporary text"
+
+    section2.appendChild(element)
+})
+
+
+
+
+    </script>
 </body>
 </html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <style>
+      * {
+        font-family: sans-serif;
+      }
+      h2 {
+        text-align: center;
+        color: rebeccapurple;
+        text-transform: capitalize;
+      }
+      .div {
+        width: 500px;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        background: lightslategray;
+        padding: 20px 15px;
+        border-radius: 5px;
+      }
+
+      .div h2 {
+        color: cornsilk;
+        text-align: left;
+      }
+
+      .div input {
+        width: 75%;
+        padding: 3px 10px;
+        border-radius: 5px;
+        outline: none;
+        border: 2px solid #ddd;
+      }
+
+      .div button {
+        display: block;
+        margin-top: 10px;
+        padding: 4px 26px;
+        border-radius: 3px;
+        background: dodgerblue;
+        color: white;
+        outline: 0;
+        border: 0;
+        cursor: pointer;
+      }
+
+      .div p {
+        color: white;
+        padding-left: 20px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <head>
+      <h2>try to calculate any number</h2>
+    </head>
+
+    <main>
+      <section>
+        <div class="div">
+          <h2>enter any number</h2>
+          <input type="text" id="input" />
+          <button id="btn">2x</button>
+          <p id="value">00</p>
+        </div>
+      </section>
+
+      <section style="margin-top: 50px">
+        <div class="div">
+          <h2>enter any number</h2>
+          <input type="text" id="input2" />
+          <button id="btn2">3x</button>
+          <p id="value2">00</p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      // double
+      let btn = document.getElementById("btn");
+      btn.addEventListener("click", () => {
+        let input = document.getElementById("input");
+
+        let inputValue = input.value;
+
+        let finalInput = parseInt(inputValue);
+        console.log(typeof finalInput);
+        if (isNaN(finalInput)) {
+          window.alert("please enter a number");
+          return;
+        }
+
+        let value = document.getElementById("value");
+        let valueNumber = parseFloat(value.innerText);
+
+        if (input.value !== "") {
+          let double = finalInput * 2;
+          value.innerText = valueNumber + double;
+          input.value = "";
+        }
+      });
+
+      // tripple
+      let btn2 = document.getElementById("btn2");
+
+      btn2.addEventListener("click", () => {
+        let input = document.getElementById("input2");
+
+        let inputValue = input.value;
+        let finalInput = parseFloat(inputValue);
+
+        if (isNaN(finalInput)) {
+          window.alert("please enter a number");
+          return;
+        }
+
+        let value = document.getElementById("value2");
+        let valueNumber = parseFloat(value.innerText);
+
+        if (input.value !== "") {
+          let double = finalInput * 3;
+          value.innerText = valueNumber + double;
+          input.value = "";
+        }
+      });
+    </script>
+  </body>
+</html>
